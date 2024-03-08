@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --bg-color :#f0f0f0;
+    --font-color :#7a5700;
+    --font-h-color :#601cfc;
+    --white : #fff;
+    --black : rgb(9, 29, 176);
+    --shdow : rgb(42, 50, 51) ;
+    --transition-some: background .3s, box-shadow 0.4s;
+    --transition-all: all 0.4s;
+    --card : #fff;
+}
+
+*{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.dark{
+    --bg-color :#001d29;
+    --white : black;
+    --black : #fff;
+    --shadow : #fff;
+    --card : white;
+}
+
+header {
+    background-color: var(--bg-color);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding for mobile */
+}
+
+.logo{
+    text-decoration: none;
+    color: var(--font-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em; /* Adjust font size for mobile */
+}
+
+.navigation a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 1em; /* Adjust font size for mobile */
+    font-weight: 500;
+    padding-left: 15px; /* Adjust padding for mobile */
+}
+
+.navigation a:hover{
+    color: var(--font-h-color);
+}
+
+section{
+    padding: 80px 20px; /* Adjust padding for mobile */
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(pic/cover.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px; /* Adjust padding for mobile */
+}
+
+.main h2{
+    color: rgb(0, 0, 0);
+    font-size: 1.2em; /* Adjust font size for mobile */
+    font-weight: 500;
+}
+
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #afd1e1;
+    font-size: 2em; /* Adjust font size for mobile */
+    font-weight: 600;
+}
+
+.main h3{
+    color: white;
+    font-size: 1.5em; /* Adjust font size for mobile */
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-button{
+    color: white;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1em; /* Adjust font size for mobile */
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.6s ease;
+}
+
+.main-button:hover{
+    background-color: #1350f8;
+    transform: scale(1.1, 1.1);
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.7em;
+    padding-right: 15px; /* Adjust padding for mobile */
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+    font-size: 1.8em; /* Adjust font size for mobile */
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.cards{
+    background-color: var(--bg-color);
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--bg-color);
+}
+
+.card {
+    background-color: var(--card);
+    width: 90%; /* Adjust width for mobile */
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px auto; /* Center cards on mobile */
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: var(--font-color);
+    font-size: 6em; /* Adjust font size for mobile */
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3{
+    color: var(--font-color);
+    font-size: 1em; /* Adjust font size for mobile */
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects{
+    background-color: var(--bg-color);
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card{
+    background-color: var(--card);
+    box-shadow: 0 5px 25px var(--shdow);
+    min-height: 12em; /* Adjust min height for mobile */
+    width: 90%; /* Adjust width for mobile */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px auto; /* Center project cards on mobile */
+    transition: 0.7s ease;
+}
+
+.project-card:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.project-card:hover .projects-image{
+    opacity: 0.9;
+}
+
+.project-image img{
+    width: 100%;
+}
+
+.project-info{
+    padding: 1em;
+}
+
+.project-category{
+    font-size: 0.8em;
+    color: var(--black);
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.more-detail:hover{
+    color: var(--font-h-color);
+}
+
+.cards-contact{
+    background-color: var(--bg-color);
+}
+
+.content .icon{
+    font-size: 3.5em; /* Adjust font size for mobile */
+}
+
+.content .info h3{
+    color: var(--black);
+}
+
+.footer{
+    background-color: var(--white) ;
+    color: var(--black);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow footer items to wrap on small screens */
+}
+
+.button {
+    background-color: var(--bg-color);
+    padding: 1em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle {
+    width: 120px; /* Adjust toggle width for mobile */
+    height: 50px; /* Adjust toggle height for mobile */
+    border: 0.1px solid #ffffff;
+    border-radius: 100px;
+    background-color: #f0edf1;
+    box-shadow: inset 10px 10px 15px #a7aaaf, inset -10px -10px 15px #ffffff;
+    position: relative;
+}
+
+.toggle .icon {
+    width: 40px; /* Adjust toggle icon size for mobile */
+    height: 40px; /* Adjust toggle icon size for mobile */
+    margin: 5px; /* Adjust margin for toggle icon for mobile */
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px 3px #f0edf1, 4px 4px 7px #a7aaaf, -4px -4px 7px #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.toggle .moon {
+    opacity: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 120px; /* Adjust toggle width for mobile */
+    height: 50px; /* Adjust toggle height for mobile */
+    cursor: pointer;
+}
+
+.toggle input:checked + label .moon {
+    opacity: 1;
+}
+
+.toggle input:checked + label .sun {
+    opacity: 0;
+}
+
+.toggle input:checked + label .icon {
+    transform: translateX(70px) rotate(360deg); /* Adjust toggle icon position for mobile */
+}
